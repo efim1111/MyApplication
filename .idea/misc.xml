@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable-v24/ic_form_time.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable-v24/rounded_bottom.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/bottom_navigation_menu.xml" value="0.1605" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_account.xml" value="0.21" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_baseline_remove_24.xml" value="0.21" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_form.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_form_date.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_form_p.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_form_reg1.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_form_ticket.xml" value="0.1" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_main.xml" value="0.2115" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_map.xml" value="0.1" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_window_of_film.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/rounded.xml" value="0.2115" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/shape_form.xml" value="0.136" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_film.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_kinoteatr.xml" value="0.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile_login.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile_register.xml" value="0.33" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_ticket.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/afisha_item.xml" value="0.5" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/bottom_navigation_menu.xml" value="0.15604959384352288" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/bottom_sheet.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/date_item.xml" value="1.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/font_certs.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/kinoteatr_item.xml" value="0.33" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/layout.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/set_film_item.xml" value="0.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/shape_form.xml" value="0.15604959384352288" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/sub_set_film_item.xml" value="1.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/ticket_item.xml" value="1.5" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2115" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
