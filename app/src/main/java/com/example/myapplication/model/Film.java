@@ -1,32 +1,28 @@
 package com.example.myapplication.model;
 
-public class Afisha {
-    int id, category;
+public class Film {
+    int itemId;
     String img, imgBd, name, text;
 
-    public Afisha(int id, String img, String imgBd, String name, String text,  int category) {
-        this.id = id;
+    public Film(int itemId, String img) {
+        this.itemId = itemId;
+        this.img = img;
+    }
+
+    public Film(int itemId, String img, String imgBd, String name, String text) {
+        this.itemId = itemId;
         this.img = img;
         this.imgBd = imgBd;
         this.name = name;
         this.text = text;
-        this.category = category;
     }
 
-    public int getId() {
-        return id;
+    public int getItemId() {
+        return itemId;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getCategory() {
-        return category;
-    }
-
-    public void setCategory(int category) {
-        this.category = category;
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
     }
 
     public String getImg() {

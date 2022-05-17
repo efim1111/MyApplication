@@ -43,13 +43,16 @@ public class AfishaAdapter extends RecyclerView.Adapter<AfishaAdapter.AfishaView
     public void onBindViewHolder(@NonNull AfishaAdapter.AfishaViewHolder holder, int position) {
 
         int imgId = context.getResources().getIdentifier("ic_" + afishas.get(position).getImg(), "drawable", context.getPackageName());
+        int imgIdBg = context.getResources().getIdentifier("ic_" + afishas.get(position).getImgBd(), "drawable", context.getPackageName());
         holder.afishaImg.setImageResource(imgId);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, FilmActivity.class);
-
+                intent.putExtra("filmName", afishas.get(position).getName());
+                intent.putExtra("filmText", afishas.get(position).getText());
+                intent.putExtra("filmImgBd", imgIdBg);
                 context.startActivity(intent);
             }
         });

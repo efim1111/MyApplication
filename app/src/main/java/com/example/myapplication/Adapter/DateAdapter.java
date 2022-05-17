@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.FilmActivity;
+import com.example.myapplication.KinoteatrActivity;
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.model.Date;
 import com.example.myapplication.model.Kinoteatr;
@@ -39,6 +41,13 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.DateViewHolder
     @Override
     public void onBindViewHolder(@NonNull DateAdapter.DateViewHolder holder, int position) {
         holder.dateName.setText(dates.get(position).getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                KinoteatrActivity.showCategoryAfisha(dates.get(position).getId());
+            }
+        });
     }
 
     @Override

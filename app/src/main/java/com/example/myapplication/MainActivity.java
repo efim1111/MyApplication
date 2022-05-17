@@ -1,23 +1,25 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.view.MenuItem;
 
 import com.example.myapplication.Adapter.SetFilmAdapter;
 import com.example.myapplication.model.SetFilm;
-import com.example.myapplication.model.SubSetFilm;
+import com.example.myapplication.model.Film;
+import com.example.myapplication.mvvm.views.MapActivity;
+import com.example.myapplication.mvvm.views.ProfileLoginActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<navigationView, navController> extends AppCompatActivity {
 
     RecyclerView setFilmRecycler;
     SetFilmAdapter setFilmAdapter;
@@ -27,18 +29,53 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<SubSetFilm> subSetFilms = new ArrayList<>();
-        subSetFilms.add(new SubSetFilm(1,"forsach"));
-        subSetFilms.add(new SubSetFilm(2,"star"));
-        subSetFilms.add(new SubSetFilm(3,"bogatir"));
-        subSetFilms.add(new SubSetFilm(4,"forsch"));
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.main);
+        bottomNavigationView.setItemIconTintList(null);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.main:
+                        return true;
+                    case R.id.map:
+                        startActivity(new Intent(getApplicationContext(), MapActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.ticket:
+                        startActivity(new Intent(getApplicationContext(), TicketActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.profileLogin:
+                        startActivity(new Intent(getApplicationContext(), ProfileLoginActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
 
-        List<SetFilm> setFilmList =  new ArrayList<>();
-        setFilmList.add(new SetFilm(1, "Специально для вас", subSetFilms));
-        setFilmList.add(new SetFilm(2, "Премьеры", subSetFilms));
-        setFilmList.add(new SetFilm(3, "Новинки", subSetFilms));
-        setFilmList.add(new SetFilm(4, "Премьеры", subSetFilms));
+        List<Film> films = new ArrayList<>();
+        films.add(new Film(1, "forsach", "dopforsach", "Форсаж", "Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+        films.add(new Film(2, "star", "dopstar", "Звёздные войны", "Звёздные войны ведут спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+        films.add(new Film(3, "bogatir", "dopbogatir", "Последний богатырь", "Последний богатырь ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+        films.add(new Film(4, "pauk", "doppauk", "Человек-паук", "Человек-паук ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+
+        List<Film> films2 = new ArrayList<>();
+        films2.add(new Film(5, "star", "dopstar", "Звёздные войны", "Звёздные войны ведут спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+        films2.add(new Film(6, "forsach", "dopforsach", "Форсаж", "Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+        films2.add(new Film(7, "pauk", "doppauk", "Человек-паук", "Человек-паук ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+        films2.add(new Film(8, "bogatir", "dopbogatir", "Последний богатырь", "Последний богатырь ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."));
+
+
+        List<SetFilm> setFilmList = new ArrayList<>();
+        setFilmList.add(new SetFilm(1, "Новинки", films));
+        setFilmList.add(new SetFilm(2, "Премьеры", films2));
+        setFilmList.add(new SetFilm(3, "Специально для вас", films));
+        setFilmList.add(new SetFilm(4, "Премьеры", films2));
 
         setSetFilmRecycler(setFilmList);
     }
@@ -49,32 +86,9 @@ public class MainActivity extends AppCompatActivity {
         setFilmRecycler = findViewById(R.id.setFilmRecycler);
         setFilmRecycler.setLayoutManager(layoutManager);
 
-        setFilmAdapter = new SetFilmAdapter(this,setFilmList);
+        setFilmAdapter = new SetFilmAdapter(this, setFilmList);
         setFilmRecycler.setAdapter(setFilmAdapter);
     }
 
-    public void mainClick(View view)
-    {
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void mapClick(View view)
-    {
-        Intent intent = new Intent(this,MapActivity.class);
-        startActivity(intent);
-    }
-
-    public void ticketClick(View view)
-    {
-        Intent intent = new Intent(this,TicketActivity.class);
-        startActivity(intent);
-    }
-
-    public void loginClick(View view)
-    {
-        Intent intent = new Intent(this,ProfileLoginActivity.class);
-        startActivity(intent);
-    }
 
 }

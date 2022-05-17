@@ -7,36 +7,35 @@
     android:background="@color/main_color"
     tools:context=".FilmActivity">
 
+    <ImageView
+        android:id="@+id/filmImgBd"
+        android:layout_width="454dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
 
-        <ImageView
-            android:id="@+id/filmImg"
-            android:layout_width="454dp"
-            android:layout_height="271dp"
-            android:scaleType="centerCrop"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_dopfors" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_dopforsach" />
 
                 <TextView
                     android:id="@+id/filmName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="-20dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Форсаж 9"
                     android:textColor="@color/white"
                     android:textSize="34sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/filmImg" />
+                    app:layout_constraintTop_toBottomOf="@+id/filmImgBd" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="16dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="О фильме"
                     android:textColor="@color/white"
@@ -48,9 +47,9 @@
             android:id="@+id/scrollView3"
             android:layout_width="369dp"
             android:layout_height="274dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
+
+            android:layout_marginTop="16dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2">
@@ -58,6 +57,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingBottom="80dp"
                 android:orientation="vertical">
 
 
@@ -68,7 +70,7 @@
                     android:fontFamily="@font/roboto"
                     android:text="Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем из всех, Доминик Торетто ведет спокойную жизнь в глуши вместе с Летти и сыном Брайаном, но опасность всегда где-то рядом. Команде приходится снова собраться, чтобы спасти Мистера Никто после крушения самолёта, на котором перевозили пойманную хакершу Сайфер. На месте аварии команда обнаруживает загадочное устройство и вскоре сталкивается с опасным преступником и самым безбашенным водителем с кем они имели дело. Ситуация усложняется тем, что этот человек — брат Доминика Джейкоб, которого много лет назад изгнали из семьи."
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </ScrollView>
 
@@ -84,7 +86,7 @@
             <FrameLayout
                 android:id="@+id/sheet_btn"
                 android:layout_width="match_parent"
-                android:layout_height="470dp"
+                android:layout_height="320dp"
                 android:background="@drawable/rounded"
                 app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
@@ -99,9 +101,9 @@
                     android:id="@+id/kinoteatrRecycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="50dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="8dp"
                     android:paddingBottom="50dp" />
 
             </FrameLayout>
@@ -109,68 +111,18 @@
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:background="@color/white"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_nav"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="11dp"
-            android:contentDescription="@string/ic_map"
-            android:onClick="mapClick"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_map" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="11dp"
-            android:contentDescription="@string/ic_main"
-            android:onClick="mainClick"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_main" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="60dp"
-            android:contentDescription="@string/ic_ticket"
-            android:onClick="ticketClick"
-            app:layout_constraintEnd_toStartOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_ticket" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="40dp"
-            android:contentDescription="@string/ic_profile"
-            android:onClick="loginClick"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_profile" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 

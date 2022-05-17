@@ -18,26 +18,35 @@
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_window_of_film.xml" value="0.136" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/rounded.xml" value="0.2115" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/shape_form.xml" value="0.136" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_film.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_bna.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_film.xml" value="0.25" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_kinoteatr.xml" value="0.25" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_map.xml" value="0.22" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_maps.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile.xml" value="0.2" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile_login.xml" value="0.2" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile_register.xml" value="0.33" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile_login.xml" value="0.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile_register.xml" value="0.2" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_ticket.xml" value="0.2" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/afisha_item.xml" value="0.5" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/bottom_navigation_menu.xml" value="0.15604959384352288" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/bottom_sheet.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/date_item.xml" value="1.25" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/film_item.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/font_certs.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_blank.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_dashboard.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_home.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_map.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_notifications.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/kinoteatr_item.xml" value="0.33" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/layout.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/set_film_item.xml" value="0.25" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/shape_form.xml" value="0.15604959384352288" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/sub_set_film_item.xml" value="1.25" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/ticket_item.xml" value="1.5" />
-        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/sub_set_film_item.xml" value="0.67" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/ticket_item.xml" value="0.2" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2115" />
         <entry key="..\:/Users/efimk/AndroidStudioProjects/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21" />
       </map>

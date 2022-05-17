@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.FilmActivity;
+import com.example.myapplication.KinoteatrActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.model.Kinoteatr;
 
@@ -39,6 +40,16 @@ public class KinoteatrAdapter extends RecyclerView.Adapter<KinoteatrAdapter.Kino
     public void onBindViewHolder(@NonNull KinoteatrAdapter.KinoteatrViewHolder holder, int position) {
         holder.kinoteatrName.setText(kinoteatrs.get(position).getName());
         holder.kinoteatrAdress.setText(kinoteatrs.get(position).getAdress());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, KinoteatrActivity.class);
+                intent.putExtra("kinName", kinoteatrs.get(position).getName());
+                intent.putExtra("kinAdress", kinoteatrs.get(position).getAdress());
+                context.startActivity(intent);
+            }
+        });
 
     }
 

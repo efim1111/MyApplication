@@ -6,13 +6,13 @@ public class SetFilm {
 
     int id;
     String title;
-    List<SubSetFilm> subSetFilmList;
+    List<Film> filmList;
 
 
-    public SetFilm(int id, String title, List<SubSetFilm> subSetFilmList) {
+    public SetFilm(int id, String title, List<Film> filmList) {
         this.id = id;
         this.title = title;
-        this.subSetFilmList = subSetFilmList;
+        this.filmList = filmList;
     }
 
     public int getId() {
@@ -32,11 +32,11 @@ public class SetFilm {
     }
 
 
-    public List<SubSetFilm> getSubSetFilmList() {
-        return subSetFilmList;
+    public List<Film> getSubSetFilmList() {
+        return filmList;
     }
 
-    public void setSubSetFilmList(List<SubSetFilm> subSetFilmList) {
-        this.subSetFilmList = subSetFilmList;
+    public void setSubSetFilmList(List<Film> filmList) {
+        this.filmList = filmList;
     }
 }

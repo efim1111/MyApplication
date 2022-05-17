@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.myapplication.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_mainActivity_to_filmActivity"
+            app:destination="@id/filmActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_mapActivity"
+            app:destination="@id/mapActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_ticketActivity"
+            app:destination="@id/ticketActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_profileLoginActivity"
+            app:destination="@id/profileLoginActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_map"
+            app:destination="@id/map" />
+    </activity>
+    <activity
+        android:id="@+id/filmActivity"
+        android:name="com.example.myapplication.FilmActivity"
+        android:label="activity_film"
+        tools:layout="@layout/activity_film"/>
+    <activity
+        android:id="@+id/mapActivity"
+        android:name="com.example.myapplication.mvvm.views.MapActivity"
+        android:label="activity_map"
+        tools:layout="@layout/activity_map"/>
+    <activity
+        android:id="@+id/ticketActivity"
+        android:name="com.example.myapplication.TicketActivity"
+        android:label="activity_ticket"
+        tools:layout="@layout/activity_ticket">
+    </activity>
+    <activity
+        android:id="@+id/profileLoginActivity"
+        android:name="com.example.myapplication.mvvm.views.ProfileLoginActivity"
+        android:label="activity_profile_login"
+        tools:layout="@layout/activity_profile_login"/>
+</navigation>

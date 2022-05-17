@@ -1,21 +1,18 @@
 package com.example.myapplication.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.FilmActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.model.SetFilm;
-import com.example.myapplication.model.SubSetFilm;
+import com.example.myapplication.model.Film;
 
 import java.util.List;
 
@@ -64,10 +61,10 @@ public class SetFilmAdapter extends RecyclerView.Adapter<SetFilmAdapter.SetFilmV
         }
     }
 
-    public void setSubRecycler(RecyclerView subRecycler, List<SubSetFilm> subSetFilmList){
-        SubSetFilmAdapter subSetFilmAdapter = new SubSetFilmAdapter(context, subSetFilmList);
+    public void setSubRecycler(RecyclerView subRecycler, List<Film> filmList){
+        FilmAdapter filmAdapter = new FilmAdapter(context, filmList);
         subRecycler.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
-        subRecycler.setAdapter(subSetFilmAdapter);
+        subRecycler.setAdapter(filmAdapter);
     }
 
 }

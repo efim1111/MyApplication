@@ -1,4 +1,5 @@
-package com.example.myapplication;
+package com.example.myapplication.mvvm.views;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,19 +9,25 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.FrameLayout;
 
 import com.example.myapplication.Adapter.KinoteatrAdapter;
+import com.example.myapplication.KinoteatrActivity;
+import com.example.myapplication.MainActivity;
+import com.example.myapplication.R;
+import com.example.myapplication.TicketActivity;
 import com.example.myapplication.model.Kinoteatr;
-import com.example.myapplication.mvvm.views.MapActivity;
-import com.example.myapplication.mvvm.views.ProfileLoginActivity;
+import com.example.myapplication.mvvm.viewModels.MapViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilmActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
+    MapViewModel mapViewModel;
+
+    FrameLayout frameLayout;
 
     RecyclerView kinoteatrRecycler;
     KinoteatrAdapter kinoteatrAdapter;
@@ -28,18 +35,27 @@ public class FilmActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_film);
+        setContentView(R.layout.activity_map);
 
-        TextView filmName = findViewById(R.id.filmName);
-        TextView filmText = findViewById(R.id.filmText);
-        ImageView filmImgBd = findViewById(R.id.filmImgBd);
+        List<Kinoteatr> kinoteatrList =  new ArrayList<>();
 
-        filmName.setText(getIntent().getStringExtra("filmName"));
-        filmText.setText(getIntent().getStringExtra("filmText"));
-        filmImgBd.setImageResource(getIntent().getIntExtra("filmImgBd", 0));
+        kinoteatrList.add(new Kinoteatr(10, "Премьера", "улица Сухарева, д.10"));
+        kinoteatrList.add(new Kinoteatr(11, "Ленин", "переулок Дударева, д.7"));
+        kinoteatrList.add(new Kinoteatr(12, "РИО", "улица Лесная, д.45"));
+        kinoteatrList.add(new Kinoteatr(13, "Премьера", "проспект Ложкина, д.7"));
+        kinoteatrList.add(new Kinoteatr(14, "Премьера", "улица Сухарева, д.7"));
+        kinoteatrList.add(new Kinoteatr(15, "Премьера", "улица Сухарева, д.7"));
+        kinoteatrList.add(new Kinoteatr(16, "Премьера", "улица Сухарева, д.7"));
+        kinoteatrList.add(new Kinoteatr(17, "Премьера", "улица Сухарева, д.10"));
+        kinoteatrList.add(new Kinoteatr(18, "Ленин", "переулок Дударева, д.7"));
+        kinoteatrList.add(new Kinoteatr(19, "РИО", "улица Лесная, д.45"));
+        kinoteatrList.add(new Kinoteatr(20, "Премьера", "проспект Ложкина, д.7"));
+
+        setKinoteatrFilmRecycler(kinoteatrList);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+        bottomNavigationView.setSelectedItemId(R.id.map);
         bottomNavigationView.setItemIconTintList(null);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,8 +67,6 @@ public class FilmActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.map:
-                        startActivity(new Intent(getApplicationContext(), MapActivity.class));
-                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.ticket:
                         startActivity(new Intent(getApplicationContext(), TicketActivity.class));
@@ -66,21 +80,6 @@ public class FilmActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
-        List<Kinoteatr> kinoteatrList =  new ArrayList<>();
-
-        kinoteatrList.add(new Kinoteatr(10, "Премьера", "улица Сухарева, д.10"));
-        kinoteatrList.add(new Kinoteatr(11, "Ленин", "переулок Дударева, д.7"));
-        kinoteatrList.add(new Kinoteatr(12, "РИО", "улица Лесная, д.45"));
-        kinoteatrList.add(new Kinoteatr(13, "Премьера", "проспект Ложкина, д.7"));
-        kinoteatrList.add(new Kinoteatr(14, "Премьера", "улица Сухарева, д.10"));
-        kinoteatrList.add(new Kinoteatr(15, "Ленин", "улица Сухарева, д.7"));
-        kinoteatrList.add(new Kinoteatr(16, "РИО", "улица Сухарева, д.7"));
-        kinoteatrList.add(new Kinoteatr(17, "Премьера", "улица Сухарева, д.7"));
-
-        setKinoteatrFilmRecycler(kinoteatrList);
-
     }
 
     private void setKinoteatrFilmRecycler(List<Kinoteatr> kinoteatrList) {
@@ -91,9 +90,16 @@ public class FilmActivity extends AppCompatActivity {
 
         kinoteatrAdapter = new KinoteatrAdapter(this,kinoteatrList);
         kinoteatrRecycler.setAdapter(kinoteatrAdapter);
+    }
 
 
+    public void kinoteatrClick(View view)
+    {
+        Intent intent = new Intent(this, KinoteatrActivity.class);
+        startActivity(intent);
     }
 
 
 }
+
+

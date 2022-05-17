@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color"
-    tools:context=".ProfileLoginActivity">
+    tools:context=".mvvm.views.ProfileLoginActivity">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -14,18 +15,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_nav"
+        app:itemTextColor="@color/black"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="139dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/roboto"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/etLogin"
+        android:hint="enter Login"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/shape_form"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
@@ -35,43 +51,44 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/etPassword"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/shape_form"
-        android:layout_marginTop="16dp"
         android:ems="10"
+        android:layout_marginTop="24dp"
+        android:hint="enter Password"
         android:inputType="textPassword"
         android:paddingStart="15dp"
         android:text="введитепароль"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:onClick="profileClick"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        app:srcCompat="@drawable/ic_form_reg2" />
+        app:layout_constraintTop_toBottomOf="@+id/etLogin" />
 
     <TextView
         android:id="@+id/textView12"
-        android:onClick="registerClick"
+        android:onClick="profileClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:text="Регистрация"
         android:fontFamily="@font/roboto"
+        android:text="Регистрация"
         android:textColor="@color/reg_color"
         android:textSize="20dp"
+        android:layout_marginTop="85dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <Button
+        android:id="@+id/buttonEnter"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:text="Войти"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

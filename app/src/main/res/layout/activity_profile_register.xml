@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color"
-    tools:context=".ProfileRegisterActivity">
+    tools:context=".mvvm.views.ProfileRegisterActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_nav"
+        app:itemTextColor="@color/black"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu"
@@ -33,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/registerName"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/shape_form"
@@ -47,58 +48,49 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <EditText
-        android:id="@+id/editTextTextPersonAge"
+        android:id="@+id/registerLogin"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/shape_form"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:paddingStart="15dp"
-        android:text="Ведите ваш возраст"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/shape_form"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:layout_marginTop="24dp"
         android:paddingStart="15dp"
         android:text="Ведите логин"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonAge" />
+        app:layout_constraintTop_toBottomOf="@+id/registerName" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/registerPassword"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/shape_form"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPassword"
         android:paddingStart="15dp"
-        android:text="введитепароль"
+        android:text="введите"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/registerLogin" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:onClick="profileClick"
+    <Button
+        android:id="@+id/buttonCreateAccount"
         android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="60dp"
+        android:text="Создать аккаунт"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        app:srcCompat="@drawable/ic_form_reg3" />
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
 
-
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Button"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView2" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
